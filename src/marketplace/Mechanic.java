@@ -51,21 +51,80 @@ public class Mechanic implements repairable {
 
     @Override
     public boolean repairSuspension(Vehicle vehicle, Player player) {
+        if (player.getBalance() > vehicle.getSuspensionRepairPrice() * price) {
+            if (NumberGenerator.calcProbability(repairProbability)) {
+                vehicle.setSuspension(true);
+                System.out.println("Succesful repair");
+                player.setBalance(player.getBalance() - (int) (vehicle.getSuspensionRepairPrice() * price));
+                player.removeVehicle(vehicle);
+                vehicle.setPrice((int) (vehicle.getPrice() * 1.2f));
+                player.addVehicle(vehicle);
+                return true;
+            } else {
+                System.out.println("Repair failure");
+            }
+        } else {
+            System.out.println("No funds.");
+        }
         return false;
     }
 
-    @Override
     public boolean repairEngine(Vehicle vehicle, Player player) {
+        if (player.getBalance() > vehicle.getEngineRepairPrice() * price) {
+            if (NumberGenerator.calcProbability(repairProbability)) {
+                vehicle.setEngine(true);
+                System.out.println("Succesful repair");
+                player.setBalance(player.getBalance() - (int) (vehicle.getEngineRepairPrice() * price));
+                player.removeVehicle(vehicle);
+                vehicle.setPrice((int) (vehicle.getPrice() * 2.0f));
+                player.addVehicle(vehicle);
+                return true;
+            } else {
+                System.out.println("Repair failure");
+            }
+        } else {
+            System.out.println("No funds.");
+        }
         return false;
     }
 
     @Override
     public boolean repairBody(Vehicle vehicle, Player player) {
+        if (player.getBalance() > vehicle.getCarBodyRepairPrice() * price) {
+            if (NumberGenerator.calcProbability(repairProbability)) {
+                vehicle.setCarBody(true);
+                System.out.println("Succesful repair");
+                player.setBalance(player.getBalance() - (int) (vehicle.getCarBodyRepairPrice() * price));
+                player.removeVehicle(vehicle);
+                vehicle.setPrice((int) (vehicle.getPrice() * 1.5f));
+                player.addVehicle(vehicle);
+                return true;
+            } else {
+                System.out.println("Repair failure");
+            }
+        } else {
+            System.out.println("No funds.");
+        }
         return false;
     }
 
     @Override
     public boolean repairGearBox(Vehicle vehicle, Player player) {
+        if (player.getBalance() > vehicle.getGearBoxRepairPrice() * price) {
+            if (NumberGenerator.calcProbability(repairProbability)) {
+                vehicle.setGearBox(true);
+                System.out.println("Succesful repair");
+                player.setBalance(player.getBalance() - (int) (vehicle.getGearBoxRepairPrice() * price));
+                player.removeVehicle(vehicle);
+                vehicle.setPrice((int) (vehicle.getPrice() * 1.5f));
+                player.addVehicle(vehicle);
+                return true;
+            } else {
+                System.out.println("Repair failure");
+            }
+        } else {
+            System.out.println("No funds.");
+        }
         return false;
     }
 }
