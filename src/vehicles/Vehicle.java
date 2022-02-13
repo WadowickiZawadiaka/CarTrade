@@ -165,6 +165,4 @@ public abstract class Vehicle implements saleable{
     public boolean checkIsFine() {
         return brakes && suspension && engine && carBody && gearBox;
     }
-
-    public abstract void buyFromMarketplace(Player player);
 }
