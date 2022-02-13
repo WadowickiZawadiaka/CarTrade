@@ -4,7 +4,7 @@ import enums.Brand;
 import enums.Color;
 import game.Player;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements saleable{
 
     protected String type;
     protected int id;

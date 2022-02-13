@@ -89,7 +89,7 @@ public class Mechanic implements repairable {
     }
 
     @Override
-    public boolean repairBody(Vehicle vehicle, Player player) {
+    public boolean repairCarBody(Vehicle vehicle, Player player) {
         if (player.getBalance() > vehicle.getCarBodyRepairPrice() * price) {
             if (NumberGenerator.calcProbability(repairProbability)) {
                 vehicle.setCarBody(true);

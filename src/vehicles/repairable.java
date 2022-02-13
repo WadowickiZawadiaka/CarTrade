@@ -10,7 +10,7 @@ public interface repairable {
 
         boolean repairEngine(Vehicle vehicle, Player player);
 
-        boolean repairBody(Vehicle vehicle, Player player);
+        boolean repairCarBody(Vehicle vehicle, Player player);
 
         boolean repairGearBox(Vehicle vehicle, Player player);
 
