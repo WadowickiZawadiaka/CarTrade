@@ -80,7 +80,7 @@ public class Marketplace {
     }
 
     public void printVehiclesList() {
-        System.out.println("| ID   | Price     | Brand    | Color    | Milleage | Brakes  | Suspension | Engine   | Body | Gearbox | Cargo space | Type     |");
+        System.out.println("| ID   | Price    | Brand    | Color    | Milleage | Brakes   | Suspension  | Engine   | Body      | Gearbox  | Cargo    | Type     |");
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------------");
         for (Vehicle vehicle : avalibleVehicles)
             vehicle.printVehicle();

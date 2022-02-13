@@ -30,7 +30,7 @@ public class CarRepair {
     }
 
     public void printRepairs() {
-        System.out.println("| Price     | Car ID  | Part ID |");
+        System.out.println("| Price     | Car ID  | Part ID   |");
         System.out.println("-----------------------------------");
         for (Repair repair : repairs)
             repair.print();
